@@ -19,7 +19,8 @@ function init() {
 
   function myFunction(e) {
     e.preventDefault()
-    let countryValue = document.getElementById('country').value
+    let countryInput = document.getElementById('country')
+    let countryValue = countryInput.value
 
     if (countryValue) {
       fetch('https://api.covid19api.com/summary')
@@ -61,6 +62,10 @@ function init() {
           resultsparent.style.display = 'block'
           results.innerHTML = resultsText
         })
+    } else {
+      console.log('empty')
+      countryInput.style.border = '1px solid red'
+      countryInput.placeholder = 'Please enter a country..'
     }
   }
 
