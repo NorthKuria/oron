@@ -2,12 +2,18 @@ document.addEventListener('DOMContentLoaded', init)
 
 function init() {
   const results = document.getElementById('results')
+  const resultsparent = document.querySelector('.resultsparent')
+  resultsparent.style.display = 'none'
 
   document.getElementById('myForm').onsubmit = function (e) {
     myFunction(e)
   }
 
   document.getElementById('country').onfocus = function (e) {
+    reset(e)
+  }
+
+  document.getElementById('button1').onclick = function (e) {
     reset(e)
   }
 
@@ -24,18 +30,35 @@ function init() {
           let resultsText = ''
           data.Countries.forEach((item) => {
             if (item.Country.toLowerCase() === countryValue.toLowerCase()) {
-              resultsText += '<h3>' + item.Country + '</h3>'
-              resultsText += '<h3>New Confirmed: ' + item.NewConfirmed + '</h3>'
-              resultsText += '<h3>New Deaths: ' + item.NewDeaths + '</h3>'
-              resultsText += '<h3>New Recovered: ' + item.NewRecovered + '</h3>'
               resultsText +=
-                '<h3>Tota Confirmed: ' + item.TotalConfirmed + '</h3>'
-              resultsText += '<h3>Total Deaths: ' + item.TotalDeaths + '</h3>'
+                '<h3 id="countryresults">' +
+                'Results for ' +
+                item.Country +
+                '</h3>'
               resultsText +=
-                '<h3>Total Recovered: ' + item.TotalRecovered + '</h3>'
+                '<h3 class="result">New Confirmed: ' +
+                item.NewConfirmed +
+                '</h3>'
+              resultsText +=
+                '<h3 class="result">New Deaths: ' + item.NewDeaths + '</h3>'
+              resultsText +=
+                '<h3 class="result">New Recovered: ' +
+                item.NewRecovered +
+                '</h3>'
+              resultsText +=
+                '<h3 class="result">Total Confirmed: ' +
+                item.TotalConfirmed +
+                '</h3>'
+              resultsText +=
+                '<h3 class="result">Total Deaths: ' + item.TotalDeaths + '</h3>'
+              resultsText +=
+                '<h3 class="result">Total Recovered: ' +
+                item.TotalRecovered +
+                '</h3>'
               console.log(item)
             }
           })
+          resultsparent.style.display = 'block'
           results.innerHTML = resultsText
         })
     }
@@ -43,5 +66,7 @@ function init() {
 
   function reset(e) {
     results.innerHTML = ''
+    resultsparent.style.display = 'none'
+    document.getElementById('country').value = ''
   }
 }

@@ -5,6 +5,11 @@
   src: url('./images/PPRadioGrotesk-Regular.otf');
 }
 
+@font-face {
+  font-family: radioblack;
+  src: url('./images/PPRadioGrotesk-Black.otf');
+}
+
 .main {
   position: relative;
   height: 100vh;
@@ -21,7 +26,7 @@
   background: url('./images/oron.jpg');
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
-  opacity: 0.6;
+  opacity: 0.4;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -29,10 +34,39 @@
   left: 0px;
 }
 
+.logo {
+  width: 50%;
+  margin: auto;
+  border-bottom: 0.1px solid white;
+}
+
+.hero {
+  width: 50%;
+  margin: 72px auto;
+
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-family: radio;
+  background-image: linear-gradient(60deg, #E21143, #FFB03A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #2C2A3A;
+  padding: 8px 0;
+  text-align: center;
+  font-family: radioblack;
+}
+
 input[type=text] {
   width: 80%;
-  padding: 12px 20px;
-  margin: 14px auto;
+  padding: 24px 12px;
+  margin: 0px auto;
   box-sizing: border-box;
   border: none;
   background: rgba(255,255,255,0.05);
@@ -42,55 +76,58 @@ input[type=text] {
   box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
   color: rgb(255, 255, 255);
   transition: color 0.3s ease-out;
+  border-radius: 6px;
+  margin-bottom: 36px;
 }
 
 .formcontent {
   width: 50%;
   margin: auto;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255,255,255,0.2);
-  border-left: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
-  border-radius: 3px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  padding: 36px 0;
 }
 
-#resultsparent {
+.resultsparent {
   width: 50%;
   margin: 1.2rem auto;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255,255,255,0.2);
-  border-left: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
-  border-radius: 3px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  padding: 36px 0;
 }
 
 #results {
-  padding: 1.2rem;
+  padding: 0px 16px;
+  font-family: radio;
 }
 
-#countrylabel {
-  line-height: 55px;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "radio", sans-serif;
-  color: #fff;
-  text-align: center;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255,255,255,0.2);
-  border-left: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
-  margin-top: 0px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+#countryresults {
+  font-family: radioblack;
+  font-size: 1.3rem;
+  border-bottom: 1px solid white;
+  margin-bottom: 6px;
+  background-image: linear-gradient(60deg, #5963B5, #B893A4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 8px 0px;
+}
+
+.result {
+  padding: 6px;
+  border-bottom: 1px solid white;
+  width: 25%;
 }
 
 ::-webkit-input-placeholder {
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-family: 'radio';
+  color: #2C2A3A;
+  font-size: 1rem;
+  font-family: 'radioblack';
 }
 
 #myForm {
@@ -102,17 +139,27 @@ input[type=text] {
 .buttons > input {
   width: 270px;
   text-align: center;
-  font-size: 14px;
+  font-size: 1rem;
   font-family: "radio", sans-serif;
   font-weight: bold;
-  padding: 12px 0;
-  color: #fff;
+  padding: 16px 0;
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255,255,255,0.2);
   border-left: 1px solid rgba(255,255,255,0.2);
   box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
-  text-transform: uppercase;
   border: none;
-  margin-bottom: 20px;
+  border-radius: 6px;
 }
+
+#button1 {
+  color: #2C2A3A;
+}
+
+#button2 {
+  font-family: radioblack;
+  background-image: linear-gradient(60deg, #E21143, #FFB03A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
