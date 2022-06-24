@@ -21,8 +21,10 @@ function init() {
     e.preventDefault()
     let countryInput = document.getElementById('country')
     let countryValue = countryInput.value
+    let loading = document.getElementById('loading')
 
     if (countryValue) {
+      resultsparent.style.display = 'block'
       fetch('https://api.covid19api.com/summary')
         .then((res) => {
           return res.json()
@@ -59,6 +61,7 @@ function init() {
               console.log(item)
             }
           })
+          loading.style.display = 'none'
           resultsparent.style.display = 'block'
           results.innerHTML = resultsText
         })
