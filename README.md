@@ -18,6 +18,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#contact">Licence</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -27,6 +28,10 @@
 
 ## About The Project
 
+Project name: Oron Covid 19 Statistics Checker
+Author: Martin Kuria
+
+Description:
 This web application will take in a user’s country and display the Covid 19 statistics for that country. The statistics will include: Total Covid Cases ,New Cases and Total Death all sourced from the Covid19 API: https://api.covid19api.com/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -35,7 +40,9 @@ This web application will take in a user’s country and display the Covid 19 st
 
 - [JavaScript](https://developer.mozilla.org/en-US/)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+### Link to live site
+
+- https://northkuria.github.io/oron/
 
 <!-- GETTING STARTED -->
 
@@ -55,8 +62,6 @@ _Follow the following steps._
 
 2. Open index.html
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- CONTACT -->
 
 ## Contact
@@ -65,7 +70,11 @@ Martin Kuria - [@your_twitter](https://twitter.com/northkuria) - martin.kuria@st
 
 Project Link: [https://github.com/northkuria/oron](https://github.com/northkuria/oron)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License.
 
 <!-- ACKNOWLEDGMENTS -->
 
